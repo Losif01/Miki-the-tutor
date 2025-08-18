@@ -1,0 +1,21 @@
+# Project-specific ignored files
+.env
+
+# Environment
+venv/
+.venv/
+env/
+
+# Bytecode and compiled files
+__pycache__/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+chroma_db/
