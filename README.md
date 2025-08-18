@@ -35,7 +35,7 @@ Miki the Tutor is a Retrieval-Augmented Generation (RAG) application that uses O
    ```bash
    ollama pull phi3
    ```
-
+note that phi3's size is 2GB, which is why this project couldn't be hosted easily, i may consider API calls but this costs money you know
 4. Place your PDF textbooks in the `/Data` directory
 
 ## Usage
