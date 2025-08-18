@@ -42,8 +42,10 @@ Miki the Tutor is a Retrieval-Augmented Generation (RAG) application that uses O
 
 1. Run the application:
    ```bash
+   python -c "from ingestion.build_index import build_vector_index; build_vector_index()"    
    python main.py
    ```
+   If you encounter any issues, run `debug_index.py` and it will show diagnosis and where exactly is the issue
 
 2. The system will:
    - Process PDFs in the `/Data` directory
@@ -52,20 +54,11 @@ Miki the Tutor is a Retrieval-Augmented Generation (RAG) application that uses O
 
 3. Ask questions about the textbook content through the interface
 
-## Configuration
-
-Modify `config.py` to adjust:
-- Chunk size for document processing
-- Embedding model parameters
-- Retrieval settings (number of passages to retrieve)
-- Generation parameters (temperature, max tokens)
-
 ## Extending to Other Books
 
 To use Miki with another textbook:
 1. Place the PDF in the `/Data` directory
-2. Update the book title in `config.py`
-3. Re-run the application to process the new book
+2. Re-run the application to process the new book
 
 ## Roadmap
 
