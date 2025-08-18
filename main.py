@@ -31,8 +31,8 @@ def main():
         )
         return
 
-    console.print("[green]✅ Miki is ready![/green] Type your questions below.")
-    console.print("[dim]📌 Type 'quit', 'exit', or Ctrl+C to exit.\n[/dim]")
+    console.print("[green] Miki is ready![/green] Type your questions below.")
+    console.print("[dim] Type 'quit', 'exit', or Ctrl+C to exit.\n[/dim]")
 
     while True:
         try:
@@ -44,19 +44,19 @@ def main():
                 console.print("[bold green]👋 Goodbye! Happy studying![/bold green]")
                 break
 
-            console.print("[bold blue]🧠 Thinking...[/bold blue]\n")
+            console.print("[bold blue] Thinking...[/bold blue]\n")
 
             result = qa.invoke({"query": question})
 
             # Render answer as Markdown (safe)
-            console.print("[bold]📝 Answer:[/bold]")
+            console.print("[bold] Answer -> [/bold]")
             safe_answer = escape_markup(result["result"].strip())
             console.print(Markdown(safe_answer))
             console.print("")
 
             # Show sources
             if result.get("source_documents"):
-                console.print("[bold]📚 Source(s):[/bold]")
+                console.print("[bold] Source:[/bold]")
                 for i, doc in enumerate(result["source_documents"], 1):
                     src = doc.metadata.get("source", "unknown")
                     page = doc.metadata.get("page", "N/A")
@@ -67,7 +67,7 @@ def main():
             console.print("[dim]" + "-" * 50 + "[/dim]\n")
 
         except KeyboardInterrupt:
-            console.print("\n[bold green]👋 Goodbye! Happy studying![/bold green]")
+            console.print("\n[bold green] Goodbye! Happy studying![/bold green]")
             break
         except Exception as e:
             # Always escape exception messages
