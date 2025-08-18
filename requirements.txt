@@ -1,0 +1,8 @@
+rich
+langchain
+langchain-community
+langchain-chroma
+langchain-ollama
+pypdf
+docx2txt
+unstructured
