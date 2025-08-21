@@ -4,6 +4,8 @@
 
 Miki the Tutor is a Retrieval-Augmented Generation (RAG) application that uses Ollama's Phi3 model to provide intelligent tutoring based on the "Grokking Algorithms" book. The application is designed to work with PDF textbooks, with the current implementation focused on the popular algorithms book but easily extensible to other educational materials.
 
+<img width="1920" height="1200" alt="Screenshot From 2025-08-21 13-29-53" src="https://github.com/user-attachments/assets/5c7974d8-ab62-45e8-97ab-53d1f89c4902" />
+
 ## Features
 
 - **PDF Document Processing**: Extracts and indexes text from PDF textbooks
